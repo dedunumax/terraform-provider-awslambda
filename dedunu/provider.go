@@ -39,6 +39,12 @@ func Provider() terraform.ResourceProvider {
 					"the AWS Lambda call.",
 				InputDefault: "",
 			},
+			"role_external_id": {
+				Type:     schema.TypeString,
+				Required: false,
+				Description: "External identifier to use when assuming role_arn",
+				InputDefault: "",
+			},
 		},
 
 		ResourcesMap: map[string]*schema.Resource{
@@ -53,7 +59,7 @@ func Provider() terraform.ResourceProvider {
 			AccessKey:                   "",
 			AssumeRoleARN:               d.Get("role_arn").(string),
 			AssumeRoleDurationSeconds:   0,
-			AssumeRoleExternalID:        "",
+			AssumeRoleExternalID:        d.Get("role_external_id").(string),
 			AssumeRolePolicy:            "",
 			AssumeRolePolicyARNs:        []string{},
 			AssumeRoleSessionName:       "",
