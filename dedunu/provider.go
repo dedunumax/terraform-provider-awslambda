@@ -35,7 +35,6 @@ func Provider() terraform.ResourceProvider {
 			"role_arn": {
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "",
 				Description: "Amazon Resource Name of an IAM Role to assume prior to making\n" +
 					"the AWS Lambda call.",
 				InputDefault: "",
