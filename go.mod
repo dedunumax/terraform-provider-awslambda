@@ -1,6 +1,6 @@
 module github.com/dedunu/terraform-provider-awslambda
 
-go 1.13
+go 1.17
 
 require (
 	github.com/aws/aws-sdk-go v1.40.56
