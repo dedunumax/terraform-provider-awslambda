@@ -1,5 +1,11 @@
 # terraform-provider-awslambda
 
+## Note
+
+terraform-provider-awslambda was developed as a workaround to Terraform AWS provider. Terraform provider has the capability. Please use it. This plug-in is not maintained.
+
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lambda_invocation
+
 ## Build
 
 ```console
@@ -41,3 +47,4 @@ output "result_entry" {
   value = jsondecode(aws_lambda_invocation.example.result)["key1"]
 }
 ```
+
